@@ -1,0 +1,57 @@
+:root {
+  --toast-hue: 170;
+  --toast-bg-color: hsl(var(--toast-hue) 90% 35%);
+  --toast-text-color: hsl(var(--toast-hue) 75% 95%);
+  --toast-shadow-color: hsl(var(--toast-hue) 90% 70%);
+}
+
+.toast {
+  z-index: 5000;
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+  color: white;
+  background-color: var(--toast-bg-color);
+  color: var(--toast-text-color);
+  padding: 1em 1.5em;
+  border-radius: 0.5em;
+  line-height: 1;
+  box-shadow: 0 1em 1em 0 var(--toast-shadow-color);
+}
+
+.toast,
+.toast--entered {
+  animation: toast-up 100ms ease-in;
+}
+
+.toast--exiting,
+.toast--exit {
+  animation: toast-down 100ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes toast-up {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    translate: 0% 50%;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    translate: 0% 0%;
+  }
+}
+
+@keyframes toast-down {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    translate: 0% 0%;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    translate: 0% 50%;
+  }
+}

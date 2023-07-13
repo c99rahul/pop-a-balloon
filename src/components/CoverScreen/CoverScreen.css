@@ -1,0 +1,21 @@
+.description + .action {
+  margin-top: 1em;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.title {
+  font-size: 1.65em;
+  margin: 0 0 1rem;
+}
+
+.description {
+  color: var(--sec-color-light);
+}

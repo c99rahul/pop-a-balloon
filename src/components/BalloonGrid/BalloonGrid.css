@@ -1,0 +1,59 @@
+.balloon-grid-wrapper {
+  padding: 1.5em 1em;
+  margin: auto;
+  max-width: 960px;
+}
+
+.balloon-grid-caption {
+  text-align: center;
+  color: var(--sec-color-light);
+}
+
+.balloon-grid-caption + .balloon-grid {
+  margin-top: 1.5em;
+}
+
+.balloon-grid {
+  transition: opacity 250ms ease-in-out;
+  gap: 2em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (min-width: 800px) {
+  .balloon-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.balloons-screen,
+.balloons-screen--entered {
+  animation: inAnimation 250ms ease-in;
+}
+
+.balloons-screen--exiting,
+.balloons-screen--exit {
+  animation: outAnimation 270ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes inAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

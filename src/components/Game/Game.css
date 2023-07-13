@@ -1,0 +1,25 @@
+.game-container {
+  min-height: 100vh;
+}
+
+.game-nav {
+  padding: 1.5em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-settings {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.game-title {
+  margin: 0;
+  font-size: 1em;
+}
+
+.game-intro-title {
+  margin: 0;
+}

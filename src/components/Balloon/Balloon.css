@@ -1,0 +1,62 @@
+.balloon {
+  max-width: 100px;
+  transition: translate 0.1s, scale 0.1s, opacity 0.1s ease-in-out;
+  margin: auto;
+  translate: 0% 100%;
+  transform-origin: center;
+}
+
+.balloon--active {
+  translate: 0% 0%;
+  transform-origin: 50% 300%;
+}
+
+.balloon--moving {
+  animation: balloon-moving 10s ease-in-out 1s infinite alternate;
+}
+
+.balloon--popping {
+  animation: balloon-popping 0.1s ease-in-out alternate;
+  transform-origin: 50% 75%;
+  translate: 0% 100%;
+}
+
+@keyframes balloon-moving {
+  25% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes balloon-popping {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(5);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.balloon-cell {
+  cursor: url(../../assets/pin.svg) 8 8, pointer;
+  position: relative;
+  padding: 3em 2em 0;
+  overflow: hidden;
+  background-color: var(--pri-color-light);
+  border-radius: 1em;
+  box-shadow: 0.25em 0.25em 0 0 var(--pri-color-dark);
+  transition: rotate 0.25s ease-in-out;
+}
+
+.balloon-cell:hover {
+  rotate: 2deg;
+}
+
+.balloon-cell:active {
+  cursor: url(../../assets/pin.svg) 8 4, pointer;
+}

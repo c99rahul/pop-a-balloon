@@ -1,0 +1,37 @@
+:root {
+  --btn-padding: 0.75em 1em;
+  --btn-radius: 1em;
+  --btn-wide-width: 350px;
+  --btn-transition-duration: 150ms;
+}
+
+.btn {
+  font-weight: bold;
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  background-color: var(--acc-color);
+  color: var(--pri-color);
+  border-color: var(--acc-color);
+  border-style: solid;
+  border-width: 1px;
+  transition: background-color var(--btn-transition-duration),
+    border-color var(--btn-transition-duration),
+    box-shadow var(--btn-transition-duration) ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  background-color: var(--acc-color-dark);
+  border-color: var(--acc-color-dark);
+}
+
+.btn--wide {
+  max-width: var(--btn-wide-width);
+}
+
+.btn--wide,
+.btn--full {
+  width: 100%;
+}

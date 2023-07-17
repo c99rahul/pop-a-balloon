@@ -19,6 +19,6 @@ I have intentionally minimized the number of dependencies required for this game
 
 Here's a glimpse of the game in action.
 
-![Pop-a-balloon Game preview](https://github.com/c99rahul/pop-a-balloon/preview.gif)
+![Pop-a-balloon Game preview](https://github.com/c99rahul/pop-a-balloon/blob/main/preview.gif)
 
 If you want to experience the game live, check out the [CodePen demo](https://codepen.io/_rahul/pen/GRwQvZY). Please note that the code structure and its fidelity to the original source may not be entirely matched in the demo version.
